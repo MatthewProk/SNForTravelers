@@ -1,0 +1,14 @@
+
+hsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(Ï·şª
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ğâãÎşÿÿÿÿ
+Esquid:S1481"+Remove this unused "worker" local variable.(‹ã¿‰ûÿÿÿÿ
+asquid:S2259"LNullPointerException might be thrown as 'preparedStatement' is nullable here(ÊÁ€ê
+Ysquid:S2259"DNullPointerException might be thrown as 'resultSet' is nullable here(èå²×
+:squid:S1166"%Either log or rethrow this exception.(É®£
+:squid:S1166"%Either log or rethrow this exception.(É®£
+–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(§¦Ë¹
+Tsquid:S1854":Remove this useless assignment to local variable "worker".(‹ã¿‰ûÿÿÿÿ
+†squid:UselessImportCheck"dRemove this unused import 'com.intellij.codeInsight.template.postfix.templates.SoutPostfixTemplate'.(‡å©
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ

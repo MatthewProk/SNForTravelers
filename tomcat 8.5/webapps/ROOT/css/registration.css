@@ -1,0 +1,66 @@
+.labelReg{
+    font-family:Georgia;
+    color: black;
+    font-size: 25px;
+}
+
+.selectText{
+    margin-top: 5px;
+    height: 40px;
+    width: 300px;
+    background-color: transparent;
+    border: solid 2px black;
+    font-size: 25px;
+    border-radius: 6px ;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background: url("http://cdn.fishki.net/upload/post/201411/26/1334081/57542_trava_priroda_doroga_leto_1920x1200_wwwgdefonru.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.block1 {
+    margin-top: 5px;
+    height: 40px;
+    width: 300px;
+    text-align:center;
+    background-color: transparent;
+    border: solid 2px black;
+    float: none;
+    border-radius: 6px ;
+    font-size: 25px;
+    vertical-align:middle;
+}
+.loginNotFree{
+    width: 100%;
+    display: flex;
+    font-family:Georgia;
+    color: red;
+    font-size: 20px;
+    align-content: center;
+    justify-content: center;
+}
+#button1, #button2, #button3{
+    background-color: transparent;
+    text-align:center;
+    color: black;
+    width: 100px;
+    height:40px;
+    font-weight:bold;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.forButton1{
+    margin-top: 20px;
+    margin-left: 1000px;
+}
+
+.forForm{
+    margin-top: 250px;
+    margin-left: 1000px;
+}

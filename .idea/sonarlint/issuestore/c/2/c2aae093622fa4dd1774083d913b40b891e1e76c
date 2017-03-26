@@ -1,0 +1,15 @@
+
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(Œ¼ îùÿÿÿÿ
+;squid:S1170"!Make this final field static too.(°¬–ßÿÿÿÿÿ
+6squid:S1170"!Make this final field static too.(Õï®ñ
+;squid:S1170"!Make this final field static too.(üçà‡úÿÿÿÿ
+:squid:S1166"%Either log or rethrow this exception.(É®£
+:squid:S1166"%Either log or rethrow this exception.(ıàÑÎ
+Ysquid:S2147"DCombine this catch with the one at line 21, which has the same body.(ıàÑÎ
+jsquid:S00116"ORename this field "HOST" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°¬–ßÿÿÿÿÿ
+isquid:S00116"SRename this field "USERNAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õï®ñ
+jsquid:S00116"ORename this field "PASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üçà‡úÿÿÿÿ
+msquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(¹Ÿ¨€
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ

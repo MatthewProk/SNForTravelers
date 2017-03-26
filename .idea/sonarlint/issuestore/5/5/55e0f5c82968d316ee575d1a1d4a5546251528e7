@@ -1,0 +1,8 @@
+
+@squid:S1068"&Remove this unused "id" private field.(ôç¼Óþÿÿÿÿ
+?squid:S1068"*Remove this unused "street" private field.(›¸ž
+=squid:S1068"(Remove this unused "city" private field.(“øÌà
+>squid:S1068")Remove this unused "house" private field.(ã»²ä
+Bsquid:S1068"(Remove this unused "flat" private field.(ÊÿÆ‰ùÿÿÿÿ
+msquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(¹Ÿ¨€
+Ksquid:UselessImportCheck")Remove this unused import 'lombok.Value'.(ß­ÅŸ

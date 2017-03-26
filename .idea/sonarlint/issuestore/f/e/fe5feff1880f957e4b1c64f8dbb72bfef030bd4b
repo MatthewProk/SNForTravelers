@@ -1,0 +1,24 @@
+
+Zsquid:UnusedPrivateMethod"8Remove this unused private "insertIntoTravelers" method.(ÅñöC
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÐŠýÀ
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÖÇ¨Ñ
+O
+squid:S106";Replace this usage of System.out or System.err by a logger.(›¿ñ–
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(é‡ø‹ûÿÿÿÿ
+T
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÄÄŸäøÿÿÿÿ
+Osquid:S1118":Add a private constructor to hide the implicit public one.(àªÅö
+Ysquid:S2259"DNullPointerException might be thrown as 'resultSet' is nullable here(èå²×
+asquid:S2259"LNullPointerException might be thrown as 'preparedStatement' is nullable here(ÊÁ€ê
+:squid:S1166"%Either log or rethrow this exception.(É®£
+:squid:S1166"%Either log or rethrow this exception.(É®£
+:squid:S1166"%Either log or rethrow this exception.(É®£
+:squid:S1166"%Either log or rethrow this exception.(É®£
+msquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(¹Ÿ¨€
+Tsquid:UselessImportCheck"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ
+[squid:UselessImportCheck"9Remove this unused import 'java.util.function.Predicate'.(ïÍ–¶
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ

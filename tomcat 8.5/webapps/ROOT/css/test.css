@@ -1,0 +1,20 @@
+body {
+    background: url(/content/img/travel.jpg);;
+    background-size: cover;
+}
+.block1 {
+	text-align:center;
+    width: 300px;
+    border: solid 3px black; 
+    float: none;
+vertical-align:middle;
+}
+
+#button1, #button2, #button3{
+    background-color: transparent;
+    text-align:center;
+    color: #ADFF2F;
+    width: 100px;
+    height:40px;
+    border-radius: 10px;
+}
