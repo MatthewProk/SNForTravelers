@@ -1,47 +1,82 @@
 package DAO.hibernateDAO;
 
-import DAO.Friendship;
+import DAO.FriendshipDAO;
 import hibernate.HibernateUtil;
+import model.Friendship;
 import model.User;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
-public class FriendDAOHibernate implements Friendship {
 
+public class FriendDAOHibernate implements FriendshipDAO {
+
+    //    public static final Logger logger = Logger.getLogger(FriendshipDaoHibernateImpl.class);
+    @Override
+    public void saveOrUpdateFriendship(User initiator, User friend) {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+
+            session.saveOrUpdate(new Friendship(initiator, friend));
+
+            session.getTransaction().commit();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
+    }
+
+    @Override
+    public List<User> getAllFriendsOfUser(User user) {
+
+        Session session = null;
+        String login = user.getLogin();
+        List<User> friendsList = new ArrayList<>();
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
+            Query query = session.createQuery("from Friendship where initiator.login='" + login + "'");
+            session.getTransaction().commit();
+            List<Friendship> friendships = query.getResultList();
+
+            friendsList.addAll(friendships.stream().map(Friendship::getFriend).collect(Collectors.toList()));
+
+        } catch (Exception e) {
+//            logger.error("Can't get all friends of user" + e);
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
+        return friendsList;
+    }
+
+    @Override
     public void deleteFriend(User init, User friend) {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
 
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
+            Query query = session.createQuery("delete  from Friendship " +
+                    "where initiator.login ='" + init.getLogin() + "' and friend.login='" + friend.getLogin() + "'");
+            query.executeUpdate();
 
-//        Query query =  session.createQuery("delete  from Friendship ");
-//                query.executeUpdate();
-
-        Query query = session.createQuery("delete from Friendship ");
-        query.executeUpdate();
-
-        session.getTransaction().commit();
-        HibernateUtil.shutdown();
-    }
-
-    public void addFriend() {
-
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
-
-        model.Friendship friendship = new model.Friendship();
-        friendship.setFriend(new User((long) 1));
-        friendship.setInitiator(new User((long) 3));
-
-        session.save(friendship);
-
-        session.getTransaction().commit();
-        HibernateUtil.shutdown();
-
-    }
-
-    public static void main(String[] args) {
-        FriendDAOHibernate f = new FriendDAOHibernate();
-        f.addFriend();
+            session.getTransaction().commit();
+        } catch (Exception e) {
+//            logger.error("Can't delete Friendship " + e);
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
     }
 }
