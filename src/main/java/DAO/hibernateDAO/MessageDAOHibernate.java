@@ -1,5 +1,6 @@
 package DAO.hibernateDAO;
 
+import DAO.MessageDAO;
 import hibernate.HibernateUtil;
 import model.Message;
 import model.User;
@@ -8,32 +9,43 @@ import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class MessageDAOHibernate {
+public class MessageDAOHibernate implements MessageDAO {
 
-    public void sendMessage(Message message){
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
+    @Override
+    public void sendMessage(Message message) {
+        Session session = null;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            session.beginTransaction();
 
-        session.save(message);
-        session.getTransaction().commit();
+            session.save(message);
+            session.getTransaction().commit();
+        } catch (Exception e) {
+//        logger.error("Can't save message " + e);
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
     }
 
-    public List<Message> getMessageList(User sender, User destination) {
+    @Override
+    public List<Message> getMessageList(User sender, User receiver) {
         Session session = null;
         List<Message> messagesList = null;
         String senderLogin = sender.getLogin();
-        String destinationLogin = destination.getLogin();
-        try{
+        String receiverLogin = receiver.getLogin();
+        try {
             session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
             Query query =
                     session.createQuery("from Message " +
-                            "where sender.login='" + senderLogin + "' and destination.login ='" + destinationLogin + "'" +
-                            "or sender.login='" + destinationLogin + "' and destination.login ='" + senderLogin + "'");
+                            "where sender.login='" + senderLogin + "' and receiver.login ='" + receiverLogin + "'" +
+                            "or sender.login='" + receiverLogin + "' and receiver.login ='" + senderLogin + "'");
             session.getTransaction().commit();
-            messagesList = query.list();
+            messagesList = query.getResultList();
 
-        } catch (Exception e){
+        } catch (Exception e) {
 //            logger.error("Can't get list of messages " + e);
         } finally {
             if (session != null && session.isOpen()) {
@@ -42,9 +54,4 @@ public class MessageDAOHibernate {
         }
         return messagesList;
     }
-
-    public static void main(String[] args) {
-//        new MessageDAOHibernate().sendMessage((long)1, "Привет");
-    }
-
 }
