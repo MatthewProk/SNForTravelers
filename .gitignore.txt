@@ -1,0 +1,7 @@
+.idea/*
+.gradle/*
+build/*
+out/*
+tomcat 8.5/*
+lib/*
+src/test/*
