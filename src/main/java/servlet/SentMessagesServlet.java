@@ -17,7 +17,7 @@ public class SentMessagesServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User sender = (User) request.getSession().getAttribute("user");
         request.setAttribute("messagesList", new MessageDAOHibernate().getAListOfSentMessages(sender));
-        request.getRequestDispatcher("/messagePage.jsp").forward(request,response);
+        request.getRequestDispatcher("/sentMessagePage.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

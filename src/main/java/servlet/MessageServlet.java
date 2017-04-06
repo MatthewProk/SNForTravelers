@@ -14,6 +14,7 @@ import java.util.Optional;
 
 @WebServlet(name = "MessageServlet")
 public class MessageServlet extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         MessageDAOHibernate messageDAO = new MessageDAOHibernate();
         User receiver = Optional.ofNullable(new UserDAOHibernate().getUserByLogin(request.getParameter("receiverLogin"))).get().orElse(null);

@@ -1,7 +1,6 @@
 package servlet;
 
 import DAO.hibernateDAO.MessageDAOHibernate;
-import model.User;
 import org.jboss.logging.Logger;
 
 import javax.servlet.ServletException;
@@ -20,10 +19,10 @@ public class DeleteMessageServlet extends HttpServlet {
 
         new MessageDAOHibernate().deleteMessage(textMessage);
 
-        request.setAttribute("messagesList", new MessageDAOHibernate()
-                .getMessageList((User) request.getSession().getAttribute("user")
-                        ,(User) request.getSession().getAttribute("receiver")));
-        request.getRequestDispatcher("/message.jsp").forward(request,response);
+//        request.setAttribute("messagesList", new MessageDAOHibernate()
+//                .getMessageList((User) request.getSession().getAttribute("user")
+//                        ,(User) request.getSession().getAttribute("receiver")));
+        request.getRequestDispatcher("/myMessages.jsp").forward(request,response);
         logger.info("Delete message: " + textMessage);
     }
 

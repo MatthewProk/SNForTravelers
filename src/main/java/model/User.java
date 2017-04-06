@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Getter
 @Setter
@@ -17,18 +16,16 @@ public class User {
     private Long id;
     private String firstName;
     private String lastName;
-    @Temporal(value = TemporalType.DATE)
-    private Date dateOfBirth;
     private Integer age;
     private String login;
     private String password;
     private String email;
     private String telephone;
-    @ManyToOne
-    private Address address;
     private String genderType;
     private String aboutSelf;
     private String avatar;
+    private String country;
+    private String city;
 
     public User(Long id){
         this.id = id;
@@ -43,13 +40,13 @@ public class User {
         return "User's id = " + id + "\n"
                 + "First Name = " + firstName + "\n"
                 + "Last Name = " + lastName + "\n"
-                + "DateOfBirth = " + dateOfBirth + "\n"
                 + "Age = " + age + "\n"
                 + "Login = " + login + "\n"
                 + "Password = " + password + "\n"
                 + "Email = " + email + "\n"
                 + "Phone = " + telephone + "\n"
-                + "Address = " + address + "\n"
+                + "Country = " + country + "\n"
+                + "City = " + city + "\n"
                 + "GenderTypeId = " + genderType + "\n"
                 + "AboutSelf = " + aboutSelf + "\n"
                 + "Avatar = " + avatar + "\n" + "\n";

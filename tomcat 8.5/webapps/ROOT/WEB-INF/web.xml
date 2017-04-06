@@ -6,7 +6,7 @@
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 <welcome-file-list>
-    <welcome-file>userRegistration.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
 </welcome-file-list>
     <servlet>
         <servlet-name>InitLangServlet</servlet-name>
@@ -40,11 +40,107 @@
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
-    <session-config>
-        <session-timeout>
-            20
-        </session-timeout>
-    </session-config>
+    <servlet>
+        <servlet-name>SignOut</servlet-name>
+        <servlet-class>servlet.SignOut</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignOut</servlet-name>
+        <url-pattern>/SignOut</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SentMessagesServlet</servlet-name>
+        <servlet-class>servlet.SentMessagesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SentMessagesServlet</servlet-name>
+        <url-pattern>/SentMessagesServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>FriendShipServlet</servlet-name>
+        <servlet-class>servlet.FriendShipServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FriendShipServlet</servlet-name>
+        <url-pattern>/FriendShipServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UnfollowServlet</servlet-name>
+        <servlet-class>servlet.UnfollowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UnfollowServlet</servlet-name>
+        <url-pattern>/UnfollowServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MessageServlet</servlet-name>
+        <servlet-class>servlet.MessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MessageServlet</servlet-name>
+        <url-pattern>/MessageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SendingMessageServlet</servlet-name>
+        <servlet-class>servlet.SendingMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SendingMessageServlet</servlet-name>
+        <url-pattern>/SendingMessageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AllUsersServlet</servlet-name>
+        <servlet-class>servlet.AllUsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AllUsersServlet</servlet-name>
+        <url-pattern>/AllUsersServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteMessageServlet</servlet-name>
+        <servlet-class>servlet.DeleteMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteMessageServlet</servlet-name>
+        <url-pattern>/DeleteMessageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReceivedMessagesServlet</servlet-name>
+        <servlet-class>servlet.ReceivedMessagesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReceivedMessagesServlet</servlet-name>
+        <url-pattern>/ReceivedMessagesServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>FriendPageServlet</servlet-name>
+        <servlet-class>servlet.FriendPageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>FriendPageServlet</servlet-name>
+    <url-pattern>/FriendPageServlet</url-pattern>
+</servlet-mapping>
+    <servlet>
+    <servlet-name>EditingProfileServlet</servlet-name>
+    <servlet-class>servlet.EditingProfileServlet</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>EditingProfileServlet</servlet-name>
+        <url-pattern>/EditingProfileServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SearchUsersServlet</servlet-name>
+        <servlet-class>servlet.SearchUsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchUsersServlet</servlet-name>
+        <url-pattern>/SearchUsersServlet</url-pattern>
+    </servlet-mapping>
+    <!--<session-config>-->
+        <!--<session-timeout>-->
+            <!--20-->
+        <!--</session-timeout>-->
+    <!--</session-config>-->
 
 
 </web-app>

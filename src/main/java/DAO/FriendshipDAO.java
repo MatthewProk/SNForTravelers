@@ -1,11 +1,12 @@
 package DAO;
 
+import model.Friendship;
 import model.User;
 import java.util.List;
 
 public interface FriendshipDAO {
 
-    void saveOrUpdateFriendship(User initiator, User friend);
+    void saveFriendship(Friendship friendship);
 
     List<User> getAllFriendsOfUser(User user);
 

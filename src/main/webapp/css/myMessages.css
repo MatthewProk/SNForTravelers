@@ -1,0 +1,16 @@
+
+.button{
+    width: 250px;
+    height:40px;
+    background-color: transparent;
+    text-align:center;
+    color: #ADFF2F;
+    border-radius: 10px;
+    float: left;
+}
+.forForm{
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 600px;
+    height: 60px;
+}

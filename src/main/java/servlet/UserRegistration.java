@@ -30,8 +30,7 @@ public class UserRegistration extends HttpServlet {
                 UserDAOHibernate userDAO = new UserDAOHibernate();
                 userDAO.addUser(firstName, lastName, login, password, email, genderType);
 //                logger.log(Level.INFO,"Registered new user");
-//                path = "/success.jsp";
-//                request.getSession().removeAttribute("freeLogin");
+                request.getSession().removeAttribute("freeLogin");
                 request.getRequestDispatcher("/success.jsp").forward(request,response);
             } else {
                 path = request.getSession().getAttribute("path").toString();

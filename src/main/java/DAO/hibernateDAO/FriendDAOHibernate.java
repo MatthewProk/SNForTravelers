@@ -5,6 +5,7 @@ import hibernate.HibernateUtil;
 import model.Friendship;
 import model.User;
 import org.hibernate.Session;
+import org.jboss.logging.Logger;
 
 import javax.persistence.Query;
 import java.util.ArrayList;
@@ -14,20 +15,21 @@ import java.util.stream.Collectors;
 
 public class FriendDAOHibernate implements FriendshipDAO {
 
-    //    public static final Logger logger = Logger.getLogger(FriendshipDaoHibernateImpl.class);
+    public static final Logger logger = Logger.getLogger(FriendDAOHibernate.class);
+
     @Override
-    public void saveOrUpdateFriendship(User initiator, User friend) {
+    public void saveFriendship(Friendship friendship) {
         Session session = null;
         try {
             session = HibernateUtil.getSessionFactory().openSession();
             session.beginTransaction();
 
-            session.saveOrUpdate(new Friendship(initiator, friend));
+            session.save(friendship);
 
             session.getTransaction().commit();
-        }catch (Exception e){
-            e.printStackTrace();
-        }finally {
+        } catch (Exception e) {
+            logger.error("Can't save or update Friendship" + e);
+        } finally {
             if (session != null && session.isOpen()) {
                 session.close();
             }
@@ -50,7 +52,7 @@ public class FriendDAOHibernate implements FriendshipDAO {
             friendsList.addAll(friendships.stream().map(Friendship::getFriend).collect(Collectors.toList()));
 
         } catch (Exception e) {
-//            logger.error("Can't get all friends of user" + e);
+            logger.error("Can't get all friends of user" + e);
         } finally {
             if (session != null && session.isOpen()) {
                 session.close();
@@ -72,7 +74,7 @@ public class FriendDAOHibernate implements FriendshipDAO {
 
             session.getTransaction().commit();
         } catch (Exception e) {
-//            logger.error("Can't delete Friendship " + e);
+            logger.error("Can't delete Friendship " + e);
         } finally {
             if (session != null && session.isOpen()) {
                 session.close();

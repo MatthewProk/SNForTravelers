@@ -7,47 +7,51 @@
     <link href="/css/registration.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<%@include file="head.jsp"%>
-<%session.setAttribute("path","/userRegistration.jsp");%>
-    <c:if test="${sessionScope.containsKey('freeLogin')}">
+<%@include file="head.jsp" %>
+<%@include file="informationForStartPage.jsp" %>
+<%session.setAttribute("path", "/userRegistration.jsp");%>
+<c:if test="${sessionScope.containsKey('freeLogin')}">
             <span class="loginNotFree">
                 <fmt:message key="loginNotFree"/>
             </span>
-    </c:if>
+</c:if>
 <form action="UserRegistration" method="get">
-    <div class="forForm">
-        <div>
-            <label class="labelReg"><fmt:message key="firstName"/>:</label>
-            <input type="text" class="block1" name="firstName" required="required" pattern="[A-Za-zА-Яа-яЁё-]{2,50}"/>
+    <div class="main">
+        <div class="child">
+            <label class="label"><fmt:message key="firstName"/>:</label>
+            <input type="text" class="block" name="firstName" required="required" pattern="[A-Za-zА-Яа-яЁё-]{2,50}"/>
         </div>
-        <div>
-            <label class="labelReg"><fmt:message key="lastName"/>:</label>
-            <input type="text" class="block1" name="lastName" required="required" pattern="[A-Za-zА-Яа-яЁё-]{2,50}"/>
+        <div class="child">
+            <label class="label"><fmt:message key="lastName"/>:</label>
+            <input type="text" class="block" name="lastName" required="required" pattern="[A-Za-zА-Яа-яЁё-]{2,50}"/>
         </div>
-        <div>
-            <label class="labelReg"><fmt:message key="login"/>:</label>
-            <input type="text" class="block1" name="login" value="" pattern="[A-Za-zА-Яа-яЁё-]{2,255}"/>
+        <div class="child">
+            <label class="label"><fmt:message key="login"/>:</label>
+            <input type="text" class="block" name="login" required="required" pattern="[A-Za-zА-Яа-яЁё-]{2,255}"/>
         </div>
-        <div>
-            <label class="labelReg"><fmt:message key="password"/>:</label>
-            <input type="password" class="block1" name="password" value="" pattern="[A-Za-zА-Яа-яЁё-0-9-]{2,255}"/>
+        <div class="child">
+            <label class="label"><fmt:message key="password"/>:</label>
+            <input type="password" class="block" name="password" required="required"
+                   pattern="[A-Za-zА-Яа-яЁё-0-9-]{2,255}"/>
         </div>
-        <div>
-            <label class="labelReg"><fmt:message key="email"/>:</label>
-            <input type="text" class="block1" name="email" required="required"/>
+        <div class="child">
+            <label class="label"><fmt:message key="email"/>:</label>
+            <input type="text" class="block" name="email" required="required"
+                      pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"/>
         </div>
-        <div>
-            <label class="labelReg"><fmt:message key="sex"/>:</label>
-            <select class="selectText" name="genderType">
+        <div class="child">
+            <label class="label"><fmt:message key="sex"/>:</label>
+            <select class="block" name="genderType">
                 <option value="Male"><fmt:message key="male"/></option>
                 <option value="Female"><fmt:message key="female"/></option>
             </select>
         </div>
+        <div class="child">
+            <button class="button1" type="submit"><fmt:message key="registration"/></button>
+            <button class="button2" type="reset"><fmt:message key="clear"/></button>
+        </div>
     </div>
-    <div class="forButton1">
-    <INPUT id="button1" type="submit" value="Register">
-    <INPUT id="button2" type="reset" value="Clear">
-    </div>
+
 </form>
 </body>
 </html>

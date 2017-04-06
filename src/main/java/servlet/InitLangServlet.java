@@ -8,7 +8,6 @@ import java.io.IOException;
 
 public class InitLangServlet extends HttpServlet {
 
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getSession().setAttribute("locale", request.getParameter("locale"));

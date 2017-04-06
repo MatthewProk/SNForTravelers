@@ -1,0 +1,57 @@
+.main{
+    margin-top: 50px;
+    margin-left: 320px;
+    width: 600px;
+    height: 500px;
+}
+.child{
+    margin-top: 5px;
+    width: 600px;
+    height: 40px;
+}
+.label{
+    width: 200px;
+    height: auto;
+    text-align: right;
+    color: #ADFF2F;
+    background-color: transparent;
+    font-size: 20px;
+    float: left;
+}
+.block{
+    width: 400px;
+    height: auto;
+    text-align: left;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 6px;
+    font-size: 20px;
+    float: left;
+}
+
+.forButton1{
+    margin-left: 520px;
+    width: 320px;
+    height: 50px;
+}
+/*.button{*/
+    /*background-color: transparent;*/
+    /*text-align:center;*/
+    /*color: #ADFF2F;*/
+    /*width: 150px;*/
+    /*height:40px;*/
+    /*font-weight:bold;*/
+    /*font-size: 20px;*/
+    /*border-radius: 10px;*/
+    /*float: left;*/
+/*}*/
+.blockSelf{
+    width: 400px;
+    height: 150px;
+    text-align: left;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 6px;
+    font-size: 20px;
+    float: left;
+}

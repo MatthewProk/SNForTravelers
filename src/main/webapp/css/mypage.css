@@ -1,0 +1,91 @@
+.first{
+    margin-top: 50px;
+    margin-left: 50px;
+    height: 300px;
+    width: 300px;
+
+}
+.first img{
+    width: 300px;
+    height: 280px;
+    align-content: right;
+    border: solid 2px black;
+    border-radius: 6px ;
+}
+.second{
+    margin-top: -300px;
+    width: 700px;
+    height: 500px;
+    float: left;
+}
+.secondChild{
+    width: 700px;
+    height: 40px;
+}
+.third{
+    margin-top: 0;
+    margin-left: 30px;
+    width: 350px;
+    height: auto;
+    float:left;
+}
+.label{
+    width: 200px;
+    height: 30px;
+    text-align: right;
+    background-color: transparent;
+    color: #ADFF2F;
+    font-size: 20px;
+    float: left;
+}
+.block{
+    margin-left: 20px;
+    width: 300px;
+    height: 30px;
+    text-align: left;
+    background-color: transparent;
+    color: #ADFF2F;
+    font-size: 20px;
+    float: left;
+}
+
+.button1{
+    margin-left: 15px;
+    width: 105px;
+    height:40px;
+    background-color: transparent;
+    text-align:center;
+    color: #ADFF2F;
+    border-radius: 10px;
+    float: left;
+}
+.selectText{
+    margin-top: 3px;
+    margin-left:20px;
+    width: 182px;
+    height: auto;
+    text-align: left;
+    background-color: transparent;
+    color: #ADFF2F;
+    border: solid 2px whitesmoke;
+    border-radius: 6px;
+    font-size: 25px;
+    float: left;
+}
+.blockSelf{
+    margin-left: 20px;
+    width: 450px;
+    height:200px;
+    border: solid 2px whitesmoke;
+    border-radius: 6px;
+    text-align: left;
+    background-color: transparent;
+    color: #ADFF2F;
+    font-size: 15px;
+    float: left;
+}
+.optional{
+    background-color: transparent;
+    border: solid 2px whitesmoke;
+    border-radius: 6px;
+}

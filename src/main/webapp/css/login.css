@@ -1,0 +1,57 @@
+.main{
+    margin-top: 200px;
+    margin-left: 820px;
+    height: 200px;
+    width: 440px;
+}
+
+.child{
+    margin-top: 5px;
+    height: 40px;
+    width: 420px;
+}
+
+.label{
+    width: 150px;
+    height: auto;
+    text-align: right;
+    background-color: transparent;
+    font-size: 25px;
+    float: left;
+}
+.block{
+    width: 250px;
+    height: auto;
+    text-align: left;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 6px;
+    font-size: 25px;
+    float: left;
+}
+
+.button1{
+    margin-left: 150px;
+    width: 100px;
+    height:40px;
+    background-color: transparent;
+    text-align:center;
+    color: #ADFF2F;
+    border-radius: 10px;
+    float: left;
+}
+.button2{
+    width: 100px;
+    height:40px;
+    background-color: transparent;
+    text-align:center;
+    color: #ADFF2F;
+    border-radius: 10px;
+    float: inherit;
+}
+
+.incorrect{
+    margin-left: 770px;
+    text-align: center;
+    color: red;
+}
